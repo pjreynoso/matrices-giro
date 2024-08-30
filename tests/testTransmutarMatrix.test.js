@@ -1,3 +1,6 @@
+/**
+ * @jest-environment node
+ */
 import { transmutarMatrix } from '../utils/transumutarMatrix';
 import React from 'react';
 

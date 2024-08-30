@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 
-const MatrixInput = ({ setMatrix }) => {
+export const MatrixInput = ({ setMatrix }) => {
   const [inputValue, setInputValue] = useState("");
   const [error, setError] = useState("");
 
@@ -51,4 +51,3 @@ const MatrixInput = ({ setMatrix }) => {
     </div>
   );
 }
-export default MatrixInput;

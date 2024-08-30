@@ -2,6 +2,7 @@
   "name": "rotate-matrices",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -15,6 +16,7 @@
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@swc/jest": "^0.2.36",
     "@testing-library/jest-dom": "^6.5.0",
     "@testing-library/react": "^16.0.1",
     "autoprefixer": "^10.4.20",
@@ -23,25 +25,17 @@
     "eslint-config-next": "14.2.7",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
+    "jest-esm-transformer": "^1.0.0",
     "jsdom": "^25.0.0",
     "postcss": "^8.4.41",
     "tailwindcss": "^3.4.10"
   },
   "jest": {
-    "moduleNameMapper": {
-      "^@/components/(.*)$": "<rootDir>/app/components/$1",
-      "^@/utils/(.*)$": "<rootDir>/utils/$1"
-    },
     "transform": {
-      "^.+\\.(js|jsx)$": "babel-jest"
+      "^.+\\.(js|jsx|ts|tsx)$": "@swc/jest"
     },
-    "moduleFileExtensions": [
-      "js",
-      "jsx"
-    ],
-    "testMatch": [
-      "<rootDir>/tests/**/*.test.js"
-    ],
-    "testEnvironment": "jest-environment-jsdom"
+    "moduleFileExtensions": ["js", "jsx", "ts", "tsx"],
+    "transformIgnorePatterns": ["<rootDir>/node_modules/"],
+    "testEnvironment": "jsdom"
   }
 }
