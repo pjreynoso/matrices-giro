@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Rotate Matrices
 
-## Getting Started
+Este proyecto es una aplicación web que permite a los usuarios ingresar matrices cuadradas y visualizar su rotación y transposición. La aplicación está construida utilizando React y Next.js, y las pruebas unitarias están implementadas con Jest y Testing Library.
 
-First, run the development server:
+## Características
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Ingreso de Matrices:** Permite ingresar matrices cuadradas en formato JSON.
+- **Visualización de la Matriz:** Muestra la matriz ingresada en un canvas HTML.
+- **Transposición de la Matriz:** Transpone la matriz ingresada y la visualiza en el canvas.
+- **Rotación de la Matriz:** Rota la matriz hacia la izquierda y la visualiza en el canvas.
+- **Validación:** Verifica que la matriz ingresada sea cuadrada y válida.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tecnologías Utilizadas
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **React:** Biblioteca de JavaScript para la construcción de interfaces de usuario.
+- **Next.js:** Framework para aplicaciones React con renderizado del lado del servidor (SSR) y generación estática.
+- **Jest:** Framework de pruebas para JavaScript.
+- **Testing Library:** Conjunto de utilidades para probar componentes React.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Instalación
 
-## Learn More
+1. Clona el repositorio:
 
-To learn more about Next.js, take a look at the following resources:
+   ```bash
+   git clone https://github.com/tuusuario/rotate-matrices.git
+   cd rotate-matrices
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Instala las dependecias
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   ```bash
+   npm install
+  
+3. Ejecuta la aplicacion en modo desarrollo
 
-## Deploy on Vercel
+   ```bash
+   npm run dev
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. Abre tu navegador y navega a http://localhost:3000
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Scripts Disponibles
+- **npm run dev:** Inicia la aplicación en modo desarrollo.
+- **npm run build:** Construye la aplicación para producción.
+- **npm run start:** Inicia un servidor de producción para la aplicación.
+- **npm run test:** Ejecuta las pruebas unitarias utilizando Jest.
+
+## Estructura del proyecto
+/app
+  /components
+    - MatrixDisplay.js         # Componente que muestra la matriz en un canvas
+    - MatrixInput.js           # Componente que permite ingresar la matriz
+  - index.js                   # Página principal de la aplicación
+/utils
+  - transumutarMatrix.js     # Función que transpone la matriz
+/tests
+  - testDisplay.test.js      # Pruebas unitarias para MatrixDisplay
+  - testInput.test.js        # Pruebas unitarias para MatrixInput
+  - testTransmutarMatrix.js  # Pruebas unitarias para la transposición de matrices
