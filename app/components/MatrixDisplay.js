@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef, useEffect } from "react";
 
-export const MatrixDisplay = ({ matrix = [] }) => {
+const MatrixDisplay = ({ matrix = [] }) => {
   const dimension = matrix.length;
   const canvasSize = dimension > 0 ? 400 : 0;
   const canvasRef = useRef(null);
@@ -41,3 +41,4 @@ export const MatrixDisplay = ({ matrix = [] }) => {
     </div>
   );
 }
+export default MatrixDisplay;

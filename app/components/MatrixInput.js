@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 
-export const MatrixInput = ({ setMatrix }) => {
+const MatrixInput = ({ setMatrix }) => {
   const [inputValue, setInputValue] = useState("");
   const [error, setError] = useState("");
 
@@ -44,10 +44,11 @@ export const MatrixInput = ({ setMatrix }) => {
         type="text"
         value={inputValue}
         onChange={handleChange}
-        placeholder="Introduce matriz cuadrada, ej. [[1,2],[3,4]]"
+        placeholder="Introduce una matriz cuadrada, ej. [[1,2],[3,4]]"
         className="p-2 border rounded w-4/12"
       />
       {error && <p style={{ color: "red", marginTop: "10px" }}>{error}</p>}
     </div>
   );
 }
+export default MatrixInput;
