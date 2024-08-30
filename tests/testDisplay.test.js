@@ -29,5 +29,4 @@ describe("MatrixDisplay", () => {
     const canvas = screen.getByTestId("matrix-canvas");
     expect(canvas).toBeInTheDocument();
   });
-  // Test more specific canvas rendering logic with mocks/spies if needed.
 });

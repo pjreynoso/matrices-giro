@@ -18,12 +18,10 @@ export const MatrixInput = ({ setMatrix }) => {
     try {
       const parsedData = JSON.parse(value);
 
-      // Comprobamos si el resultado es un array
       if (!Array.isArray(parsedData)) {
         throw new Error("El valor ingresado debe ser un array de arrays.");
       }
 
-      // Comprobamos si cada elemento del array principal también es un array
       const dimension = parsedData.length;
       if (parsedData.some(element => !Array.isArray(element) || element.length !== dimension)) {
         throw new Error("la matriz debe ser cuadrada perfecta.");
@@ -32,7 +30,6 @@ export const MatrixInput = ({ setMatrix }) => {
       setMatrix(parsedData);
       setError("");
     } catch (err) {
-      // Capturamos y manejamos los diferentes tipos de errores
       if (err instanceof SyntaxError) {
         setError("El valor ingresado debe ser un array de arrays, ej. [[1,2],[3,4]].");
       } else {
